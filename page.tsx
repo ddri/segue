@@ -1,7 +1,7 @@
 "use client"
 
 import { useState, useEffect } from "react"
-import { Play, Pause, Calendar, Mail, Instagram, Twitter } from "lucide-react"
+import { Play, Pause, Mail, Instagram, Twitter } from "lucide-react"
 import Image from "next/image"
 import Link from "next/link"
 
@@ -20,7 +20,7 @@ export default function Component() {
 
   const albums = [
     {
-      title: "Acid Dreams",
+      title: "SEGUE",
       year: "2024",
       tracks: 12,
       image: "/placeholder.svg?height=400&width=400",
@@ -42,24 +42,6 @@ export default function Component() {
       year: "2021",
       tracks: 14,
       image: "/placeholder.svg?height=400&width=400",
-    },
-  ]
-
-  const events = [
-    {
-      date: "Mar 15",
-      venue: "Acid Club, Manchester",
-      location: "UK",
-    },
-    {
-      date: "Mar 22",
-      venue: "Warehouse Berlin",
-      location: "Germany",
-    },
-    {
-      date: "Apr 05",
-      venue: "Club Chemistry, Amsterdam",
-      location: "Netherlands",
     },
   ]
 
@@ -125,7 +107,7 @@ export default function Component() {
       </section>
 
       {/* Latest Release */}
-      <section className="py-24 px-4 md:px-6 bg-[#1C1C1C]">
+      {/* <section className="py-24 px-4 md:px-6 bg-[#1C1C1C]">
         <div className="max-w-6xl mx-auto">
           <h2 className="text-3xl md:text-4xl font-bold mb-12 text-center text-[#FFD700]">Latest Release</h2>
           <div className="grid md:grid-cols-2 gap-12 items-center">
@@ -156,7 +138,7 @@ export default function Component() {
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* Albums Grid */}
       <section className="py-24 px-4 md:px-6 bg-[#2C2C2C]">
@@ -189,36 +171,6 @@ export default function Component() {
         </div>
       </section>
 
-      {/* Tour Dates */}
-      <section className="py-24 px-4 md:px-6 bg-[#1C1C1C]">
-        <div className="max-w-6xl mx-auto">
-          <h2 className="text-3xl md:text-4xl font-bold mb-12 text-center text-[#FFD700]">Upcoming Shows</h2>
-          <div className="space-y-4">
-            {events.map((event) => (
-              <div
-                key={event.venue}
-                className="flex items-center justify-between p-6 rounded-lg border border-gray-800 hover:border-[#FFD700] transition-colors bg-[#2C2C2C]"
-              >
-                <div className="flex items-center gap-6">
-                  <Calendar className="hidden sm:block text-[#FFD700]" />
-                  <div>
-                    <p className="font-bold text-lg text-white">{event.venue}</p>
-                    <p className="text-gray-400">
-                      {event.date} • {event.location}
-                    </p>
-                  </div>
-                </div>
-                <Button
-                  variant="outline"
-                  className="rounded-full border-[#FFD700] text-[#FFD700] hover:bg-[#FFD700] hover:text-black"
-                >
-                  Get Tickets
-                </Button>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
 
       {/* Bio Section */}
       <section className="py-24 px-4 md:px-6 bg-[#1C1C1C]">
@@ -229,46 +181,32 @@ export default function Component() {
                 <h2 className="text-3xl md:text-4xl font-bold mb-6 text-[#FFD700]">About SEGUE</h2>
                 <div className="prose prose-invert prose-yellow">
                   <p className="text-gray-300 leading-relaxed">
-                    Formed in the underground warehouse scene of Manchester in 2019, SEGUE has been pushing the
-                    boundaries of modern acid house music. Blending classic Roland TB-303 sounds with contemporary
-                    production techniques, we create a unique sonic experience that bridges the gap between old-school
-                    rave culture and modern electronic music.
+                    Segue are an electronic live act born out of the Australian club and warehouse rave circuit of the early 2000s. Originally intended as an occasional side project of members of the Australian mainstay acts of the time (Superfluid and Statler & Waldorf), Segue was carried into regular touring with a timely take on live electronic music with a throwback to the acid house sensibilities of the 1990s.
                   </p>
                   <p className="text-gray-300 leading-relaxed mt-4">
-                    Our journey from illegal warehouse parties to international festivals represents our commitment to
-                    keeping the authentic spirit of acid house alive while evolving with the modern electronic music
-                    landscape.
+                    A regular fixture of the rave and festival circuit for a decade, with just a few singles to make their steady performance schedule, the act went into hiatus as the team split across multiple countries and missions in academic and technology. A hiatus broken with the pandemic in 2020, bringing all members back to their home city Brisbane to dig through the archives, and uncover the "lost albums" recovered from studio storage, and begin a series of re-releases that continues into the current era.
                   </p>
                 </div>
-              </div>
-
-              <div>
-                <h3 className="text-xl font-bold mb-4 text-[#FFD700]">Musical Style</h3>
-                <p className="text-gray-300 leading-relaxed">
-                  SEGUE's sound is characterized by hypnotic 303 basslines, driving rhythms, and atmospheric
-                  synthscapes. Our production approach combines analog hardware with cutting-edge digital techniques,
-                  creating a distinctive sound that's both nostalgic and forward-thinking.
-                </p>
               </div>
             </div>
 
             <div className="space-y-8">
-              <h3 className="text-xl font-bold mb-6 text-[#FFD700]">The Collective</h3>
+              <h3 className="text-xl font-bold mb-6 text-[#FFD700]">The Team</h3>
               <div className="grid gap-6">
                 {[
                   {
-                    name: "Alex Thompson",
-                    role: "Production / 303 Programming",
+                    name: "David Ryan",
+                    role: "Production, Engineering, Synths (live)",
                     image: "/placeholder.svg?height=200&width=200",
                   },
                   {
-                    name: "Sarah Chen",
-                    role: "Synthesis / Sound Design",
+                    name: "Leo Hede",
+                    role: "Production, DJ, Sequencing (live)",
                     image: "/placeholder.svg?height=200&width=200",
                   },
                   {
-                    name: "Marcus Webb",
-                    role: "Drums / Rhythm Programming",
+                    name: "Kris Swales",
+                    role: "Production, Percussion, Drumming (live)",
                     image: "/placeholder.svg?height=200&width=200",
                   },
                 ].map((member) => (
